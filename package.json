@@ -1,0 +1,20 @@
+{
+  "name": "note-taker-express",
+  "version": "1.0.0",
+  "description": "Note taking application using express.js that saves and gets data from a JSON file.",
+  "main": "server.js",
+  "scripts": {
+    "test": "No test specified",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mandrews78/Note-Taker-Express.git"
+  },
+  "author": "Michael Andrews",
+  "license": "ISC",
+  "dependencies": {
+    "express": "4.18.1",
+    "node": "^18.7.0"
+  }
+}
