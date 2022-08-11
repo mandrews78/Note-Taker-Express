@@ -2,6 +2,9 @@
 # Note Taker
 
 In this assignment we were to modify the starter code we were given to create an application called Note Taker that can be used to write, saved, and delete notes.  This application uses an Express.js backend and will save and retrieve note data from a JSON file.
+
+github repository: git@github.com:mandrews78/Note-Taker-Express.git
+
 ## Screenshots
 
 ![notetakerscreenshot](https://user-images.githubusercontent.com/70594281/184241893-03390062-1b5a-4230-8e3d-4dea569f216d.png)
