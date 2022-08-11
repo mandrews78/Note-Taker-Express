@@ -45,6 +45,26 @@ app.post('/api/notes', function (req, res) {
   res.json(savedNotes)
 })
 
+//Delete note function
+app.delete('/api/notes/:id', (req, res) => {
+  let savedNotes = JSON.parse(fs.readFileSync('./db/db.json'))
+  let noteID = req.params.id
+  let newID = 0
+  console.log(`Deleting note with ID ${noteID}`)
+  savedNotes = savedNotes.filter((currentNote) => {
+    return currentNote.id != noteID
+  })
+
+  for (currentNote of savedNotes) {
+    currentNote.id = newID.toString()
+    newID++
+  }
+
+  //Write new notes to db.json file
+  fs.writeFileSync('./db/db.json', JSON.stringify(savedNotes))
+  res.json(savedNotes)
+})
+
 app.listen(PORT, () =>
   console.log(`Serving static asset routes at http://localhost:${PORT}!`),
 )
